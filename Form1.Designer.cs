@@ -28,51 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblClickMeTxt = new System.Windows.Forms.Label();
-            this.picBoxButton = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxButton)).BeginInit();
-            this.SuspendLayout();
+            lblClickMeTxt = new Label();
+            picBoxButton = new PictureBox();
+            txtBoxREGPATH = new TextBox();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)picBoxButton).BeginInit();
+            SuspendLayout();
             // 
             // lblClickMeTxt
             // 
-            this.lblClickMeTxt.AutoSize = true;
-            this.lblClickMeTxt.Location = new System.Drawing.Point(12, 9);
-            this.lblClickMeTxt.Name = "lblClickMeTxt";
-            this.lblClickMeTxt.Size = new System.Drawing.Size(265, 20);
-            this.lblClickMeTxt.TabIndex = 0;
-            this.lblClickMeTxt.Text = "*click Nanaya To Dissect Reset 30 Days";
+            lblClickMeTxt.AutoSize = true;
+            lblClickMeTxt.Location = new Point(186, 12);
+            lblClickMeTxt.Name = "lblClickMeTxt";
+            lblClickMeTxt.Size = new Size(265, 20);
+            lblClickMeTxt.TabIndex = 0;
+            lblClickMeTxt.Text = "*click Nanaya To Dissect Reset 30 Days";
             // 
             // picBoxButton
             // 
-            this.picBoxButton.Image = global::SimpleKeyDelete.Properties.Resources.nanaya;
-            this.picBoxButton.Location = new System.Drawing.Point(3, 5);
-            this.picBoxButton.Name = "picBoxButton";
-            this.picBoxButton.Size = new System.Drawing.Size(168, 117);
-            this.picBoxButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxButton.TabIndex = 1;
-            this.picBoxButton.TabStop = false;
-            this.picBoxButton.Click += new System.EventHandler(this.pictureBox1_Click);
+            picBoxButton.Image = Properties.Resources.nanaya;
+            picBoxButton.Location = new Point(12, 12);
+            picBoxButton.Name = "picBoxButton";
+            picBoxButton.Size = new Size(168, 117);
+            picBoxButton.SizeMode = PictureBoxSizeMode.StretchImage;
+            picBoxButton.TabIndex = 1;
+            picBoxButton.TabStop = false;
+            picBoxButton.Click += pictureBox1_Click;
+            // 
+            // txtBoxREGPATH
+            // 
+            txtBoxREGPATH.Location = new Point(186, 74);
+            txtBoxREGPATH.Name = "txtBoxREGPATH";
+            txtBoxREGPATH.Size = new Size(314, 27);
+            txtBoxREGPATH.TabIndex = 2;
+            txtBoxREGPATH.Text = "HKEY_USERS\\<your PC Code>1001_Classes";
+            txtBoxREGPATH.TextChanged += txtBoxREGPATH_TextChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(186, 51);
+            label1.Name = "label1";
+            label1.Size = new Size(300, 20);
+            label1.TabIndex = 3;
+            label1.Text = "REGPATH Input on Start: (Modify Right Path)";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 134);
-            this.Controls.Add(this.lblClickMeTxt);
-            this.Controls.Add(this.picBoxButton);
-            this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "IDM Reset ";
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxButton)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(512, 144);
+            Controls.Add(label1);
+            Controls.Add(txtBoxREGPATH);
+            Controls.Add(lblClickMeTxt);
+            Controls.Add(picBoxButton);
+            MaximizeBox = false;
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "IDM Reset ";
+            ((System.ComponentModel.ISupportInitialize)picBoxButton).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Label lblClickMeTxt;
         private PictureBox picBoxButton;
+        private TextBox txtBoxREGPATH;
+        private Label label1;
     }
 }
